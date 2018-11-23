@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Load Gifs</title>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script type='text/javascript'>
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+      if(xhr.readyState === 4){
+        document.write(xhr.responseText);
+      }
+    };
+    xhr.open('GET','http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=bhNsQlel9MnZQxd7uTj33LiG2n5WdSzx&limit=5');
+    xhr.send();
+  </script>
+</head>
+<body>
+
+</body>
+</html>
